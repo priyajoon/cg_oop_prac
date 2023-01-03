@@ -1,0 +1,60 @@
+//template assignment
+//akansha dhami
+//7205
+
+#include<bits/stdc++.h>
+using namespace std;
+
+template <typename T>
+void input (T x[],int n)
+{
+    int i;
+    //cin>>n;
+    for (i=0;i<n;i++)
+    {
+        cin>>x[i];
+    }
+    }
+template <typename T>
+void sort(T x[],int n)
+{
+    int i,j;
+    for (i=0;i<n;i++)
+    {
+        T k;
+        T temp;
+        k=x[i];
+        int cd=i;
+        for (j=i+1;j<n;j++)
+        {
+            if (x[j]<k)
+            {
+                k=x[j];
+                cd=j;
+            }
+            
+        }
+        swap(x[i],x[cd]);
+    }
+
+}
+template <typename T>
+void output(T x[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        cout<<x[i]<<" ";
+    }
+}
+int main()
+{   int n;
+    cin>>n;
+    int x[n];
+    
+    input <int>(x,n);
+    sort <int>(x,n);
+    output <int>(x,n);
+
+    return 0;
+}
